@@ -17,8 +17,8 @@ int Factorial(int n){
 int main(){
     try{
         accessIvalidMemory();
-    } catch (const out_of_range& 0) {
-        cout << 0.what() << endl;
+    } catch (const out_of_range& e) {
+        cout << e.what() << endl;
     }
     Factorial(1);
     cout << endl;
