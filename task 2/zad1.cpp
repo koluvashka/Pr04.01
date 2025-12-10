@@ -1,5 +1,6 @@
 #include <iostream>
 #include <clocale>
+#include <cstdlib>
 using namespace std;
 int Factorial(int n){
     if (n<=1)
@@ -7,7 +8,7 @@ int Factorial(int n){
     return n * Factorial(n-1);
 }
 int main(){
-    setlocale(LC_ALL, "Russian");
+    system("chcp 1251<null");
     int sum = 0;
     for(int i = 1; i <=10; i++){
         sum += i;

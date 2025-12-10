@@ -1,35 +1,19 @@
 #include <iostream>
-
+#include <random>
 using namespace std;
+int main(){
 
-int main() {
-    int limit = 100000; 
-    int count = 0;      
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<>  dis(0.0, 100.0);
+    double n{};
+    volatile double result = 0;
+    for(int i = 0; i < 1000000; i++){
+        n = dis(gen);
+        cout << n << endl;
+        result += n;
 
-    cout << "Ищу простые числа до " << limit << "..." << endl;
-
-    for (int i = 2; i <= limit; i++) {
-        bool isPrime = true;
-
-       
-        for (int j = 2; j < i; j++) {
-            if (i % j == 0) {
-                isPrime = false;
-              
-            }
-        }
-
-        if (isPrime == true) {
-            count = count + 1;
-        }
-        
-        // Показываем прогресс каждые 5000 чисел
-        if (i % 5000 == 0) {
-            cout << "Обработано: " << i << endl;
-        }
     }
-
-    cout << "Всего найдено простых чисел: " << count << endl;
-
+    cout << result;
     return 0;
 }

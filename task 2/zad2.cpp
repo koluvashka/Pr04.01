@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void accessIvalidMemory(){
+void accessInvalidMemory(){
     vector<int> arr(10);
     cout << arr.at(20) << endl;
 }
@@ -16,7 +16,7 @@ int Factorial(int n){
 }
 int main(){
     try{
-        accessIvalidMemory();
+        accessInvalidMemory();
     } catch (const out_of_range& e) {
         cout << e.what() << endl;
     }
