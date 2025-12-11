@@ -26,14 +26,14 @@ double calculateArea(double length, double width)
 /// Демонстрирует работу функции calculateArea() на нескольких примерах.
 /// </remarks>
 int main() {
-    system("chcp 1251"); // Установка кодировки для вывода кириллицы
+    std::system("chcp 1251"); // Установка кодировки для вывода кириллицы
 
     double length1 = 10.0;
     double width1 = 5.0;
 
-    cout << "Площадь (10 x 5): " << calculateArea(length1, width1) << endl;
-    cout << "Площадь (3.5 x 2): " << calculateArea(3.5, 2) << endl;
-    cout << "Площадь (100 x 20): " << calculateArea(100, 20) << endl;
+    std::cout << "Площадь (10 x 5): " << calculateArea(length1, width1) << std::endl;
+    std::cout << "Площадь (3.5 x 2): " << calculateArea(3.5, 2) << std::endl;
+    std::cout << "Площадь (100 x 20): " << calculateArea(100, 20) << std::endl;
 
     return 0;
 }
