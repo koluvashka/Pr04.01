@@ -11,7 +11,7 @@ Release/
 *.vcxproj.filters
 *.vcxproj.user
 
-*.zip
+
 *.obj
 *.pdb
 *.ilk
